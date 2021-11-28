@@ -2,7 +2,6 @@ package com.example.hikeu
 
 import androidx.annotation.NonNull
 import androidx.room.Entity
-import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity
@@ -13,7 +12,7 @@ data class UnOfficialTrails (
     @NonNull var country: String,
     @NonNull var state: String,
     @NonNull var googleMapsLink: String,
-    @NonNull var difficulty: Int,
+    @NonNull var difficulty: String,
     @NonNull var duration: Int,
     @NonNull var warnings:String,
     @NonNull var clothing:String,
@@ -27,12 +26,11 @@ data class UnOfficialTrails (
         country: String,
         state: String,
         googleMapsLink: String,
-        difficulty: Int,
+        difficulty: String,
         duration: Int,
         warnings: String,
         clothing: String,
         indispensables: String,
-        images: String,
         ): this(
         0,
         name,
@@ -44,5 +42,5 @@ data class UnOfficialTrails (
         warnings,
         clothing,
         indispensables,
-        images)
+        "0")
 }

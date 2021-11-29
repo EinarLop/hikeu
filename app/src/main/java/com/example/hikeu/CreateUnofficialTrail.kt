@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.hikeu.databinding.FragmentCreateUnofficialTrailBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -61,7 +60,7 @@ class CreateUnofficialRoute : Fragment() {
             val state = binding.inputState.text.toString()
             val googleMapsLink = binding.inputGoogleMapsLink.text.toString()
             val difficulty = binding.spinnerDifficulty.selectedItem.toString()
-            val duration = binding.inputDuration.text.toString().toInt()
+            val duration = binding.inputDuration.text.toString()
             val warnings = binding.inputWarnings.text.toString()
             val clothing = binding.inputClothing.text.toString()
             val indispensables = binding.inputIndispensables.text.toString()
@@ -72,20 +71,20 @@ class CreateUnofficialRoute : Fragment() {
                 state,
                 googleMapsLink,
                 difficulty,
-                duration,
+                1,
                 warnings,
                 clothing,
                 indispensables,
             )
 
-            Log.d("Test", difficulty)
+            Log.d("Test", "popop")
 
-            var viewModel = ViewModelProvider(
-                this, HikeuViewModelFactory(
-                    (context as
-                            HikeuApp).database.MainDao()
-                )
-            ).get(HikeuViewModel::class.java)
+//            var viewModel = ViewModelProvider(
+//                this, HikeuViewModelFactory(
+//                    (context as
+//                            HikeuApp).database.MainDao()
+//                )
+//            ).get(HikeuViewModel::class.java)
 
 //            lifecycleScope.launch{
 //                viewModel.addUnOfficialTrail(unOfficialTrail)

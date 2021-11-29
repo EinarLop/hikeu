@@ -30,10 +30,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-        binding.button2.setOnClickListener{
-            Toast.makeText(this, "POP", Toast.LENGTH_SHORT)
-            Log.d("Hey",  "popopooopo")
-        }
 
 
 

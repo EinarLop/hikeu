@@ -9,7 +9,7 @@ import com.example.hikeu.OfficialTrails
 import com.example.hikeu.UnOfficialTrails
 import com.example.hikeu.Users
 
-@Database(entities= [OfficialTrails::class, UnOfficialTrails::class, Users::class], version = 1)
+@Database(entities= [OfficialTrails::class, UnOfficialTrails::class, Users::class], version = 2)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun MainDao(): HikeuDao
     companion object{
@@ -21,6 +21,7 @@ abstract class AppDatabase : RoomDatabase(){
             return INSTANCE ?: synchronized(this){
                 val instance = Room
                     .databaseBuilder(context, AppDatabase::class.java, "hikeu")
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance

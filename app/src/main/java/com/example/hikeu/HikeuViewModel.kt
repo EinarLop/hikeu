@@ -3,7 +3,7 @@ package com.example.hikeu
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-class HikeuViewModel (private val hikeuDao: HikeuDao): ViewModel() {
+class HikeuViewModel (val hikeuDao: HikeuDao): ViewModel() {
     suspend fun getAllOfficialTrails(): List<OfficialTrails> = hikeuDao.getAllOfficialTrails()
     suspend fun getOfficialTrailById(id: Int): OfficialTrails = hikeuDao.getOfficialTrailById(id)
     suspend fun addOfficialTrail(officialTrail: OfficialTrails) : Long = hikeuDao.addOfficialTrail(officialTrail)

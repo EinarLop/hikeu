@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_home"
+        android:icon="@drawable/ic_baseline_house_24"
+        android:title="Home"
+
+    <item
+        android:id="@+id/ic_officialroute"
+        android:icon="@drawable/ic_baseline_location_on_24"
+        android:title="Official Routes"
+
+    <item
+        android:id="@+id/ic_nonofficialroute"
+        android:icon="@drawable/ic_baseline_not_listed_location_24"
+        android:title="Non-Official Routes"
+
+
+</menu>

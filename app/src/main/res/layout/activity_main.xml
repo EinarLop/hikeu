@@ -8,25 +8,25 @@
 
 
 <!--    Eliminar, solo se usa para probar el fragmenent de create unofficial trail-->
-<!--    <fragment-->
-
-<!--        android:id="@+id/list"-->
-<!--        android:name="com.example.hikeu.CreateUnofficialTrail"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_weight="1"-->
-<!--        tools:layout_editor_absoluteX="160dp"-->
-<!--        tools:layout_editor_absoluteY="-16dp" />-->
-
     <fragment
 
         android:id="@+id/list"
-        android:name="com.example.hikeu.UserProfile"
+        android:name="com.example.hikeu.HomeFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         tools:layout_editor_absoluteX="160dp"
         tools:layout_editor_absoluteY="-16dp" />
+
+<!--    <fragment-->
+
+<!--        android:id="@+id/list"-->
+<!--        android:name="com.example.hikeu.UserProfile"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        tools:layout_editor_absoluteX="160dp"-->
+<!--        tools:layout_editor_absoluteY="-16dp" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,11 +21,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+
         val homeFragment = HomeFragment()
         val officialTrailsFragment = OfficialTrailsFragment()
         val createunofficialTrail = CreateUnofficialTrail()
         val profile = UserProfile()
         val unofficial = unofficialFragment()
+
 
 
         makeCurrentFragment(homeFragment)

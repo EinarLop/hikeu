@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         var viewModel = ViewModelProvider(this,HikeuViewModelFactory((application as
                 HikeuApp).database.MainDao())).get(HikeuViewModel::class.java)
 
+
+
     lifecycleScope.launch {
         val user = Users("einarpop", "123", "eina@mail.com")
         var us = viewModel.addUser(user)

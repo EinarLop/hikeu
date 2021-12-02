@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.hikeu.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -21,13 +22,7 @@ class MainActivity : AppCompatActivity() {
         var viewModel = ViewModelProvider(this,HikeuViewModelFactory((application as
                 HikeuApp).database.MainDao())).get(HikeuViewModel::class.java)
 
-    lifecycleScope.launch {
-        val user = Users("einarpop", "123", "eina@mail.com")
-        var us = viewModel.addUser(user)
-        Log.d("db", us.toString())
-        val users = viewModel.getAllUsers()
-        Log.d("db", users.toString())
-    }
+
 
 
 

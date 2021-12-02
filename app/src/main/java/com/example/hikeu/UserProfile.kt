@@ -14,6 +14,7 @@ import androidx.fragment.app.activityViewModels
 import com.example.hikeu.databinding.FragmentCreateUnofficialTrailBinding
 import com.example.hikeu.databinding.FragmentUserProfileBinding
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,6 +32,7 @@ class UserProfile : Fragment() {
     private var param2: String? = null
 
     private val viewModel: HikeuViewModel by activityViewModels()
+    private var currentUser = Users("No user found", "No user found", "No user found")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,11 +57,50 @@ class UserProfile : Fragment() {
         val view = binding.root
 
 
+
+
+        binding.buttonGetInfo.setOnClickListener{
+            lifecycleScope.launch {
+                currentUser = viewModel.getUserById(7)
+                binding.inputUsername.editText?.setText(currentUser.username)
+                binding.inputEmail.editText?.setText(currentUser.email)
+                binding.inputPassword.editText?.setText(currentUser.password)
+                binding.inputAge.editText?.setText(currentUser.age.toString())
+                binding.inputNumberOfHikes.editText?.setText(currentUser.numberOfHikes.toString())
+                binding.inputFavoriteHike.editText?.setText(currentUser.favoriteHike)
+                binding.inputDreamHike.editText?.setText(currentUser.dreamHike)
+
+//                    val user = Users("einar"+ Random.nextInt(0,100), "123", "eina@mail.com")
+//                    var us = viewModel.addUser(user)
+//                    Log.d("User", us.toString())
+
+
+            }
+        }
+
+
         binding.buttonUpdate.setOnClickListener{
             lifecycleScope.launch{
-//                val einar = Users("Einar", "123", "einar@mail.com")
-//                viewModel.addUser(einar)
-                val einar = viewModel.getUserById(1)
+                val newUsername = binding.inputUsername.editText?.text.toString()
+                val newEmail = binding.inputEmail.editText?.text.toString()
+                val newPassword = binding.inputPassword.editText?.text.toString()
+                val newAge = binding.inputAge.editText?.text.toString()
+                val newNumberOfHikes = binding.inputNumberOfHikes.editText?.text.toString()
+                val newFavoriteHike = binding.inputFavoriteHike.editText?.text.toString()
+                val newDreamHike = binding.inputDreamHike.editText?.text.toString()
+
+
+                currentUser.username = newUsername
+                currentUser.email = newEmail
+                currentUser.password = newPassword
+                currentUser.age = newAge.toInt()
+                currentUser.numberOfHikes = newNumberOfHikes.toInt()
+                currentUser.favoriteHike = newFavoriteHike
+                currentUser.dreamHike = newDreamHike
+
+                viewModel.updateUser(currentUser)
+
+                val einar = viewModel.getUserById(7)
                 Log.d("UP", einar.toString())
             }
         }
@@ -87,6 +128,7 @@ class UserProfile : Fragment() {
                 }
             }
     }
+
 
 
 

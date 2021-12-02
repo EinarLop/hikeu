@@ -7,13 +7,16 @@
     tools:context=".MainActivity">
 
 
-
-    <!--    Eliminar, solo se usa para probar el fragmenent de create unofficial trail-->
-
     <FrameLayout
         android:id="@+id/fl_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></FrameLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -24,7 +27,10 @@
         app:itemIconTint="#fff"
         app:itemTextColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list"
-        app:menu="@menu/nav_menu">
-
+        app:menu="@menu/nav_menu"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    
+

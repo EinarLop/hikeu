@@ -23,6 +23,7 @@ class HikeuViewModel (val hikeuDao: HikeuDao): ViewModel() {
     suspend fun deleteUser(user: Users) = hikeuDao.deleteUser(user)
 
     val pruebaRutasList = listOf<OfficialTrails>(
+
         OfficialTrails(name="Ruta1", country = "Mexico", state = "Chiapas", googleMapsLink = "google",
         difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
         OfficialTrails(name="Ruta2", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
@@ -40,6 +41,8 @@ class HikeuViewModel (val hikeuDao: HikeuDao): ViewModel() {
         OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
             difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
    )
+
+
 
 }
 

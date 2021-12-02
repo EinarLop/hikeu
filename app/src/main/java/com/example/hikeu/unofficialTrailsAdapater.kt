@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.hikeu.databinding.ItemTrailBinding
 
-class trailsAdapater (var trails: List<OfficialTrails>) : RecyclerView.Adapter<trailsAdapater.ViewHolder>() {
+class unofficialTrailsAdapater (var trails: List<UnOfficialTrails>) : RecyclerView.Adapter<unofficialTrailsAdapater.ViewHolder>() {
 
     class ViewHolder(val binding: ItemTrailBinding) : RecyclerView.ViewHolder(binding.root) {
 
@@ -21,8 +21,11 @@ class trailsAdapater (var trails: List<OfficialTrails>) : RecyclerView.Adapter<t
         holder.binding.apply {
             textViewNombreRutas.text = trails[position].name
             textViewDificultad.text = trails[position].difficulty
-            textViewTiempo.text = trails[position].duration.toString() + " Minutes"
+            textViewTiempo.text = trails[position].duration.toString() +" Minutes"
+            textViewUbicacion.text = trails[position].state
+
         }
+
     }
 
     override fun getItemCount(): Int {

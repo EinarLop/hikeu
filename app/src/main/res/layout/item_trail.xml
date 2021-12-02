@@ -5,39 +5,59 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#4CAF50"
+        android:backgroundTintMode="screen"
+        android:clickable="true">
 
         <TextView
-            android:id="@+id/textView_tiempo"
+            android:id="@+id/textView_ubicacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textView_dificultad"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/imageView_ruta"
             app:layout_constraintTop_toBottomOf="@+id/textView_nombreRutas" />
 
         <TextView
             android:id="@+id/textView_dificultad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="50dp"
             android:layout_marginTop="24dp"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/textView_ubicacion"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/textView_tiempo"
+            app:layout_constraintStart_toEndOf="@+id/imageView_ruta"
             app:layout_constraintTop_toBottomOf="@+id/textView_nombreRutas" />
 
         <TextView
-            android:id="@+id/textView_ubicacion"
+            android:id="@+id/textView_tiempo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
             android:layout_marginTop="24dp"
+            android:layout_marginEnd="50dp"
             android:text="TextView"
-            app:layout_constraintStart_toEndOf="@+id/imageView_ruta"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView_nombreRutas" />
+
+        <TextView
+            android:id="@+id/textView_nombreRutas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView_ruta"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView_ruta"
@@ -47,19 +67,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@android:drawable/ic_menu_mapmode" />
 
-        <TextView
-            android:id="@+id/textView_nombreRutas"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginTop="16dp"
-            android:text="TextView"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:translationX="100dp"
-            app:layout_constraintStart_toStartOf="@+id/imageView_ruta"
-            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.cardview.widget.CardView>

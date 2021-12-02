@@ -7,26 +7,24 @@
     tools:context=".MainActivity">
 
 
-<!--    Eliminar, solo se usa para probar el fragmenent de create unofficial trail-->
-<!--    <fragment-->
 
-<!--        android:id="@+id/list"-->
-<!--        android:name="com.example.hikeu.CreateUnofficialTrail"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_weight="1"-->
-<!--        tools:layout_editor_absoluteX="160dp"-->
-<!--        tools:layout_editor_absoluteY="-16dp" />-->
+    <!--    Eliminar, solo se usa para probar el fragmenent de create unofficial trail-->
 
-    <fragment
-
-        android:id="@+id/list"
-        android:name="com.example.hikeu.UserProfile"
+    <FrameLayout
+        android:id="@+id/fl_wrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="-16dp" />
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/primaryColor"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list"
+        app:menu="@menu/nav_menu">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

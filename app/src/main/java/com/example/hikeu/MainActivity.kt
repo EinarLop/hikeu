@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val homeFragment = HomeFragment()
-        val officialTrailsFragment = OfficialTrailsFragment()
+        val officialTrailsFragment = TrailsFragment()
         val createunofficialTrail = CreateUnofficialTrail()
         val profile = UserProfile()
         val unofficial = unofficialFragment()
@@ -50,13 +50,7 @@ class MainActivity : AppCompatActivity() {
             )
         ).get(HikeuViewModel::class.java)
 
-        lifecycleScope.launch {
-            val user = Users("einarpop", "123", "eina@mail.com")
-            var us = viewModel.addUser(user)
-            Log.d("db", us.toString())
-            val users = viewModel.getAllUsers()
-            Log.d("db", users.toString())
-        }
+
 
 
     }

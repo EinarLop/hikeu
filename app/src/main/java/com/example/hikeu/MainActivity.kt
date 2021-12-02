@@ -1,5 +1,6 @@
 package com.example.hikeu
 
+import android.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
 
         val homeFragment = HomeFragment()
         val officialTrailsFragment = OfficialTrailsFragment()
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity() {
     private fun makeCurrentFragment(fragmen: Fragment) =
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fl_wrapper, fragmen)
+
             commit()
         }
 }

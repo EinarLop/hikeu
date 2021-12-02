@@ -1,10 +1,19 @@
 package com.example.hikeu
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
+import androidx.fragment.app.activityViewModels
+
+import com.example.hikeu.databinding.FragmentCreateUnofficialTrailBinding
+import com.example.hikeu.databinding.FragmentUserProfileBinding
+import kotlinx.coroutines.launch
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,20 +30,42 @@ class UserProfile : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private val viewModel: HikeuViewModel by activityViewModels()
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
     }
 
+
+    private var _binding: FragmentUserProfileBinding? = null
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_user_profile, container, false)
+
+
+        _binding = FragmentUserProfileBinding.inflate(inflater, container, false)
+        val view = binding.root
+
+
+        binding.buttonUpdate.setOnClickListener{
+            lifecycleScope.launch{
+//                val einar = Users("Einar", "123", "einar@mail.com")
+//                viewModel.addUser(einar)
+                val einar = viewModel.getUserById(1)
+                Log.d("UP", einar.toString())
+            }
+        }
+
+
+        return view
     }
 
     companion object {
@@ -56,4 +87,7 @@ class UserProfile : Fragment() {
                 }
             }
     }
+
+
+
 }

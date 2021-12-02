@@ -2,19 +2,28 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/ic_home"
+        android:id="@+id/home"
         android:icon="@drawable/ic_baseline_house_24"
-        android:title="Home"
+        android:title="Home"/>
 
     <item
-        android:id="@+id/ic_officialroute"
+        android:id="@+id/officialroutes"
         android:icon="@drawable/ic_baseline_location_on_24"
-        android:title="Official Routes"
+        android:title="Official"/>
 
     <item
-        android:id="@+id/ic_nonofficialroute"
+        android:id="@+id/unofficialroutes"
         android:icon="@drawable/ic_baseline_not_listed_location_24"
-        android:title="Non-Official Routes"
+        android:title="Non-Official"/>
 
+    <item
+        android:id="@+id/createunofficialroute"
+        android:icon="@drawable/ic_baseline_add_location_alt_24"
+        android:title="Create"/>
+
+    <item
+        android:id="@+id/userprofile"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="User"/>
 
 </menu>

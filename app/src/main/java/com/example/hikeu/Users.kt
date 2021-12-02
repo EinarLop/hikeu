@@ -11,15 +11,24 @@ data class Users(
     @NonNull var username: String,
     @NonNull var password: String,
     @NonNull var email: String,
+    @NonNull var age: Int,
+    @NonNull var numberOfHikes: Int,
+    @NonNull var favoriteHike: String,
+    @NonNull var dreamHike: String,
 )
 
 {
     constructor(
         username: String,
         password: String,
-        email: String) :this
+        email: String,
+    ) :this
         (0,
         username,
         password,
-        email)
+        email,
+        0,
+        0,
+        "No answer",
+        "No answer")
 }

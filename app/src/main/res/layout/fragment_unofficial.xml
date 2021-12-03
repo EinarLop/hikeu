@@ -11,10 +11,11 @@
         android:id="@+id/textView_unofficialTrails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
         android:text="Unofficial Trails"
         android:textColor="#4CAF50"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +23,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUnofficialRutas"
-        android:layout_width="409dp"
-        android:layout_height="553dp"
+        android:layout_width="411dp"
+        android:layout_height="446dp"
         android:layout_marginTop="1dp"
         android:layout_marginBottom="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,12 +34,10 @@
 
     <Button
         android:id="@+id/getUnofficialTrails"
-        android:layout_width="wrap_content"
+        android:layout_width="124dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Update Trails"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
-        app:layout_constraintStart_toEndOf="@+id/textView_unofficialTrails"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginStart="10dp"
+        android:text="Get trails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_unofficialTrails" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ import com.example.hikeu.OfficialTrails
 import com.example.hikeu.UnOfficialTrails
 import com.example.hikeu.Users
 
-@Database(entities= [OfficialTrails::class, UnOfficialTrails::class, Users::class], version = 3)
+@Database(entities= [OfficialTrails::class, UnOfficialTrails::class, Users::class], version = 4)
 abstract class AppDatabase : RoomDatabase(){
     abstract fun MainDao(): HikeuDao
     companion object{

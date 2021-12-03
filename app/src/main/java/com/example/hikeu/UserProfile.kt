@@ -62,7 +62,10 @@ class UserProfile : Fragment() {
 
         binding.buttonGetInfo.setOnClickListener{
             lifecycleScope.launch {
-                currentUser = viewModel.getUserById(7)
+
+                val user = Users("user", "123", "einar@mail")
+                viewModel.addUser(user)
+                currentUser = viewModel.getUserById(1)
                 binding.inputUsername.editText?.setText(currentUser.username)
                 binding.inputEmail.editText?.setText(currentUser.email)
                 binding.inputPassword.editText?.setText(currentUser.password)

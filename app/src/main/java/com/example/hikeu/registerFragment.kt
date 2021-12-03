@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
@@ -45,12 +46,13 @@ class registerFragment : Fragment() {
             val password = binding.inputPassword.toString()
             val confPassword = binding.inputConfPass.toString()
 
+            Toast.makeText(context,"Hola",Toast.LENGTH_SHORT)
             if(username != null && email != null && password != null && confPassword != null){
                 if(password == confPassword){
                     val newUser = Users(username, password, email)
                     lifecycleScope.launch{
                         viewModel.addUser(newUser)
-                        // binding.inputUsername.setText()
+                        Toast.makeText(context,"Registrado Correctamente",Toast.LENGTH_SHORT)
                     }
                 }
         }

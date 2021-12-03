@@ -25,6 +25,28 @@ class HikeuViewModel (val hikeuDao: HikeuDao): ViewModel() {
 
     var currentUserID = 0
 
+    val pruebaRutasList = listOf<OfficialTrails>(
+
+        OfficialTrails(name="Ruta1", country = "Mexico", state = "Chiapas", googleMapsLink = "google",
+        difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta2", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Advanced", duration = 3, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta3", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Intermediate", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+   )
+
+
+
 }
 
 class HikeuViewModelFactory(private val hikeuDao: HikeuDao): ViewModelProvider.Factory{

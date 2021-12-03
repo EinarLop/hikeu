@@ -1,14 +1,15 @@
 package com.example.hikeu
 
+import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.example.hikeu.databinding.ActivityMainBinding
 import kotlinx.coroutines.launch
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -19,14 +20,45 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        var viewModel = ViewModelProvider(this,HikeuViewModelFactory((application as
-                HikeuApp).database.MainDao())).get(HikeuViewModel::class.java)
+
+
+        val homeFragment = HomeFragment()
+        val officialTrailsFragment = TrailsFragment()
+        val createunofficialTrail = CreateUnofficialTrail()
+        val profile = UserProfile()
+        val unofficial = unofficialFragment()
 
 
 
+        makeCurrentFragment(homeFragment)
+
+        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+            when (it.itemId){
+                R.id.home -> makeCurrentFragment(homeFragment)
+                R.id.officialroutes -> makeCurrentFragment(officialTrailsFragment)
+                R.id.unofficialroutes -> makeCurrentFragment(unofficial)
+                R.id.userprofile -> makeCurrentFragment(profile)
+                R.id.createunofficialroute -> makeCurrentFragment(createunofficialTrail)
+            }
+            true
+        }
+
+        var viewModel = ViewModelProvider(
+            this, HikeuViewModelFactory(
+                (application as
+                        HikeuApp).database.MainDao()
+            )
+        ).get(HikeuViewModel::class.java)
 
 
 
 
     }
+
+    private fun makeCurrentFragment(fragmen: Fragment) =
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.fl_wrapper, fragmen)
+
+            commit()
+        }
 }

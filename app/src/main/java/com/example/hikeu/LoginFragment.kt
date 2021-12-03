@@ -36,6 +36,30 @@ class LoginFragment : Fragment() {
     ): View? {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
 
+        val viewModel = ViewModelProvider(requireActivity()).get(HikeuViewModel::class.java)
+
+        binding.buttonLogIn.setOnClickListener {
+
+            val username = binding.inputUsername.toString()
+            val password = binding.inputPassword.toString()
+
+
+
+            if(username != null && password != null){
+                lifecycleScope.launch{
+
+                    val currentUser = viewModel.getUserByUsername(username)
+
+                    if(currentUser != null){
+                        if(currentUser.password == password) {
+                            viewModel.currentUserID = currentUser.id
+                        }
+                    }
+
+                }
+            }
+        }
+
 
 
         return binding.root

@@ -21,7 +21,7 @@
     <fragment
 
         android:id="@+id/list"
-        android:name="com.example.hikeu.UserProfile"
+        android:name="com.example.hikeu.registerFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"

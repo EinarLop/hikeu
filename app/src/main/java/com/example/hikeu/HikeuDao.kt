@@ -56,4 +56,9 @@ interface HikeuDao {
     @Delete
     suspend fun deleteUser(user: Users)
 
+    @Query("Select * from Users where username=:username")
+    suspend fun getUserByUsername(username: String): Users
+
+
+
 }

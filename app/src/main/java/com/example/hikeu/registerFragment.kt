@@ -24,7 +24,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-class OfficialTrailsFragment : Fragment() {
+class registerFragment : Fragment() {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
@@ -50,7 +50,7 @@ class OfficialTrailsFragment : Fragment() {
                     val newUser = Users(username, password, email)
                     lifecycleScope.launch{
                         viewModel.addUser(newUser)
-
+                        // binding.inputUsername.setText()
                     }
                 }
         }

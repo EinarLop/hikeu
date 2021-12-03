@@ -1,13 +1,16 @@
 package com.example.hikeu
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.hikeu.databinding.FragmentOfficialTrailsBinding
+import com.example.hikeu.databinding.FragmentRegisterBinding
+import kotlinx.coroutines.launch
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,23 +24,36 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 
-class OfficialTrailsFragment : Fragment() {
+class registerFragment : Fragment() {
 
-    private var _binding: FragmentOfficialTrailsBinding? = null
+    private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentOfficialTrailsBinding.inflate(inflater, container, false)
+        _binding = FragmentRegisterBinding.inflate(inflater, container, false)
 
 
-        binding.getTrails.setOnClickListener {
+        binding.buttonSignIn.setOnClickListener {
+
             val viewModel = ViewModelProvider(requireActivity()).get(HikeuViewModel::class.java)
-            val adaptador = trailsAdapater(viewModel.pruebaRutasList)
-            binding.rvRutas.adapter = adaptador
-            binding.rvRutas.layoutManager = LinearLayoutManager(activity)
+
+            val username = binding.inputUsername.toString()
+            val email = binding.inputEmail.toString()
+            val password = binding.inputPassword.toString()
+            val confPassword = binding.inputConfPass.toString()
+
+            if(username != null && email != null && password != null && confPassword != null){
+                if(password == confPassword){
+                    val newUser = Users(username, password, email)
+                    lifecycleScope.launch{
+                        viewModel.addUser(newUser)
+                        // binding.inputUsername.setText()
+                    }
+                }
+        }
         }
         return binding.root
     }
@@ -57,4 +73,3 @@ class OfficialTrailsFragment : Fragment() {
     }
 
 }
-

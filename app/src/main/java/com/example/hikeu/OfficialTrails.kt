@@ -7,11 +7,12 @@ import androidx.room.PrimaryKey
 @Entity
 data class OfficialTrails (
     @NonNull @PrimaryKey(autoGenerate = true)  val id: Int,
+//    @NonNull @ForeignKey(Entity = [Users::class]) val userId: Int,
     @NonNull var name: String,
     @NonNull var country: String,
     @NonNull var state: String,
     @NonNull var googleMapsLink: String,
-    @NonNull var difficulty: Int,
+    @NonNull var difficulty: String,
     @NonNull var duration: Int,
     @NonNull var warnings:String,
     @NonNull var clothing:String,
@@ -25,13 +26,13 @@ data class OfficialTrails (
         country: String,
         state: String,
         googleMapsLink: String,
-        difficulty: Int,
+        difficulty: String,
         duration: Int,
         warnings: String,
         clothing: String,
         indispensables: String,
-        images: String,
-    ): this(
+
+        ): this(
         0,
         name,
         country,
@@ -42,5 +43,5 @@ data class OfficialTrails (
         warnings,
         clothing,
         indispensables,
-        images)
+        "No images")
 }

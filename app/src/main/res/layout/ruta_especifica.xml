@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E5E5E5">
+
+    <ImageView
+        android:id="@+id/indispensableImage"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clothingImage"
+        app:srcCompat="@drawable/must_have" />
+
+    <ImageView
+        android:id="@+id/clothingImage"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/warningImage"
+        app:srcCompat="@drawable/tshirt" />
+
+    <ImageView
+        android:id="@+id/warningImage"
+        android:layout_width="37dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/durationImage"
+        app:srcCompat="@drawable/alert" />
+
+    <ImageView
+        android:id="@+id/durationImage"
+        android:layout_width="37dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyImage"
+        app:srcCompat="@drawable/stop_watch" />
+
+    <TextView
+        android:id="@+id/clothingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="Clothing"
+        app:layout_constraintStart_toEndOf="@+id/clothingImage"
+        app:layout_constraintTop_toBottomOf="@+id/warningsText" />
+
+    <TextView
+        android:id="@+id/durationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="Duration"
+        app:layout_constraintStart_toEndOf="@+id/durationImage"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyText" />
+
+    <TextView
+        android:id="@+id/warningsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:text="Warnings"
+        app:layout_constraintStart_toEndOf="@+id/warningImage"
+        app:layout_constraintTop_toBottomOf="@+id/durationText" />
+
+    <TextView
+        android:id="@+id/indispensablesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:text="Indispensables"
+        app:layout_constraintStart_toEndOf="@+id/indispensableImage"
+        app:layout_constraintTop_toBottomOf="@+id/clothingText" />
+
+    <TextView
+        android:id="@+id/placeNameText"
+        android:layout_width="194dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Cerro de la Silla"
+        android:textColor="#07593C"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/specificPlaceText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/specificPlaceText"
+        android:layout_width="194dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif-black"
+        android:text="El Teleférico"
+        android:textAlignment="center"
+        android:textColor="#07593C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeNameText" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="194dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Cerro De La Silla"
+        android:textColor="#07593C"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backBtn"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="#2196F3"
+        android:backgroundTint="#000000"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="247dp"
+        android:layout_height="171dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:srcCompat="@drawable/cerro" />
+
+    <TextView
+        android:id="@+id/difficultyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="36dp"
+        android:text="Difficulty"
+        app:layout_constraintStart_toEndOf="@+id/difficultyImage"
+        app:layout_constraintTop_toBottomOf="@+id/specificPlaceText" />
+
+    <ImageView
+        android:id="@+id/difficultyImage"
+        android:layout_width="35dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/specificPlaceText"
+        app:srcCompat="@drawable/speedometer2_0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
 
         val homeFragment = HomeFragment()
-        val officialTrailsFragment = TrailsFragment()
+        val officialTrailsFragment = OfficialTrailsFragment()
         val createunofficialTrail = CreateUnofficialTrail()
         val profile = UserProfile()
         val unofficial = unofficialFragment()

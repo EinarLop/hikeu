@@ -29,22 +29,22 @@ class HikeuViewModel (val hikeuDao: HikeuDao): ViewModel() {
 
     val pruebaRutasList = listOf<OfficialTrails>(
 
-        OfficialTrails(name="Ruta1", country = "Mexico", state = "Chiapas", googleMapsLink = "google",
-        difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta2", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Advanced", duration = 3, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta3", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Intermediate", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
-        OfficialTrails(name="Ruta1", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
-            difficulty = "Beginner", duration = 50, warnings = "cuidado", clothing = "comoda", indispensables = "agua"),
+        OfficialTrails(name="El Teleférico", country = "Mexico", state = "Nuevo León", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 2, warnings = "Lluvioso, resbaloso", clothing = "Para lluvia", indispensables = "Capa"),
+        OfficialTrails(name="Pico Norte", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Advanced", duration = 6, warnings = "Serpientes", clothing = "Manga larga, pantalones", indispensables = "Más de 3lt de agua"),
+        OfficialTrails(name="La Antena", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Intermediate", duration = 4, warnings = "Resbaloso", clothing = "Tenis seguro", indispensables = "Gorra"),
+        OfficialTrails(name="El Chupón", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 2, warnings = "Serpientes", clothing = "Manga larga", indispensables = "Lentes y gorra"),
+        OfficialTrails(name="Chipinque", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 3, warnings = "Hay osos", clothing = "Cómoda", indispensables = "Comprar entrada"),
+        OfficialTrails(name="El Mirador", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 2, warnings = "Resbaloso", clothing = "Tenis con buena suela", indispensables = "Palos"),
+        OfficialTrails(name="La Estanzuela", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Intermediate", duration = 2, warnings = "Resbaloso", clothing = "Para frío", indispensables = "Doble traje"),
+        OfficialTrails(name="Cerro Agujerado", country = "Mexico", state = "Nuevo Leon", googleMapsLink = "google",
+            difficulty = "Beginner", duration = 3, warnings = "Mucha tierra", clothing = "Para agua", indispensables = "Doble traje")
    )
 
 

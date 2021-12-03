@@ -122,7 +122,7 @@
             android:layout_marginTop="25dp"
             android:backgroundTint="@color/secondaryColor"
             android:ems="10"
-            android:text="Sign in"
+            android:text="Register"
             android:textColor="#FFFFFF"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

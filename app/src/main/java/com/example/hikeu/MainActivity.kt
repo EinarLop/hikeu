@@ -4,6 +4,7 @@ import androidx.fragment.app.Fragment
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 
 import androidx.lifecycle.ViewModelProvider
@@ -27,20 +28,51 @@ class MainActivity : AppCompatActivity() {
         val createunofficialTrail = CreateUnofficialTrail()
         val profile = UserProfile()
         val unofficial = unofficialFragment()
-
-
+        val logIn = LoginFragment()
+        val register = registerFragment()
 
         makeCurrentFragment(homeFragment)
 
         binding.bottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId){
-                R.id.home -> makeCurrentFragment(homeFragment)
-                R.id.officialroutes -> makeCurrentFragment(officialTrailsFragment)
-                R.id.unofficialroutes -> makeCurrentFragment(unofficial)
-                R.id.userprofile -> makeCurrentFragment(profile)
-                R.id.createunofficialroute -> makeCurrentFragment(createunofficialTrail)
+                R.id.home -> {
+                    makeCurrentFragment(homeFragment)
+                    binding.buttonLogIn.visibility = View.VISIBLE
+                    binding.buttonRegister.visibility = View.VISIBLE
+                }
+                R.id.officialroutes -> {
+                    makeCurrentFragment(officialTrailsFragment)
+                    binding.buttonLogIn.visibility = View.INVISIBLE
+                    binding.buttonRegister.visibility = View.INVISIBLE
+                }
+                R.id.unofficialroutes -> {
+                    makeCurrentFragment(unofficial)
+                    binding.buttonLogIn.visibility = View.INVISIBLE
+                    binding.buttonRegister.visibility = View.INVISIBLE
+                }
+                R.id.userprofile -> {
+                    makeCurrentFragment(profile)
+                    binding.buttonLogIn.visibility = View.INVISIBLE
+                    binding.buttonRegister.visibility = View.INVISIBLE
+                }
+                R.id.createunofficialroute -> {
+                    makeCurrentFragment(createunofficialTrail)
+                    binding.buttonLogIn.visibility = View.INVISIBLE
+                    binding.buttonRegister.visibility = View.INVISIBLE
+                }
             }
             true
+        }
+
+        binding.buttonRegister.setOnClickListener{
+            binding.buttonLogIn.visibility = View.INVISIBLE
+            binding.buttonRegister.visibility = View.INVISIBLE
+            makeCurrentFragment(register)
+        }
+        binding.buttonLogIn.setOnClickListener{
+            binding.buttonLogIn.visibility = View.INVISIBLE
+            binding.buttonRegister.visibility = View.INVISIBLE
+            makeCurrentFragment(logIn)
         }
 
         var viewModel = ViewModelProvider(

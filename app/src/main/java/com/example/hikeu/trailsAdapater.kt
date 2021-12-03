@@ -26,6 +26,7 @@ class trailsAdapater (var trails: List<OfficialTrails>) : RecyclerView.Adapter<t
             textViewNombreRutas.text = trails[position].name
             textViewDificultad.text = trails[position].difficulty
             textViewTiempo.text = trails[position].duration.toString() + " Minutes"
+            textViewUbicacion.text = trails[position].state
             textWarnings.text = trails[position].warnings
             textClothing.text = trails[position].clothing
             textIndispensables.text = trails[position].indispensables

@@ -1,15 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app= "http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Home">
 
+    android:layout_height="wrap_content">
 
- 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        tools:context=".HomeFragment">
 
-</FrameLayout>
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="2000dp"
+            android:layout_height="900dp"
+            android:src="@drawable/a_b_971ogvaq_yu_unsplash"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="300dp"
+            android:fontFamily="@font/baloo_tamma"
+            android:text="hikeu"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            android:textSize="60sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.102" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FFFFFF"
+            android:text="@string/for_mountain_lovers"
+            android:textAlignment="center"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="189dp"
+            android:layout_height="176dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="-45dp"
+            android:background="#4CAF50"
+            android:fontFamily="@font/amiko"
+            android:text="All of Monterrey's escenic views in one app, Cerro de la Silla, La Huasteca, La M, and much more. The numbero one city for the mountain enthusiasts."
+            android:textAlignment="textEnd"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            app:barrierMargin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="189dp"
+            android:layout_height="176dp"
+            android:background="#4CAF50"
+            android:fontFamily="@font/amiko"
+            android:text="Hikers, trekkers and climbers, anyway mountain lovers can use hikeu for their everyday guide around Monterrey."
+            android:textAlignment="textEnd"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            app:barrierMargin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="287dp"
+            android:layout_height="253dp"
+            android:layout_marginTop="-60dp"
+            android:layout_marginEnd="-60dp"
+            android:src="@drawable/hafid_davila_sktzifi1agy_unsplash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="195dp"
+            android:layout_height="174dp"
+            android:layout_marginTop="165dp"
+            android:layout_marginEnd="180dp"
+            android:background="#4CAF50"
+            android:fontFamily="@font/amiko"
+            android:text="From duration, difficulty, tips and tricks, entrance, recommended gear, Heiku has all the information for a perfect hike."
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="240dp"
+            android:layout_height="286dp"
+            android:layout_marginStart="-65dp"
+            android:layout_marginTop="-60dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/gabriel_tovar_cdegx9hhqa8_unsplash"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.096"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="232dp"
+            android:layout_height="270dp"
+            android:layout_marginStart="-65dp"
+            android:layout_marginTop="280dp"
+            android:src="@drawable/chipinquecumbredelam_gaia_xtreme_3_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.07"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

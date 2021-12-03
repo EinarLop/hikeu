@@ -2,4 +2,6 @@
     <string name="app_name">hikeu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hikeu">hikeu</string>
+    <string name="for_mountain_lovers">FOR MOUNTAIN LOVERS</string>
 </resources>

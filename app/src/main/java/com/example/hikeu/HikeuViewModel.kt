@@ -21,7 +21,11 @@ class HikeuViewModel (val hikeuDao: HikeuDao): ViewModel() {
     suspend fun addUser(user: Users) : Long =hikeuDao.addUser(user)
     suspend fun updateUser(user: Users) = hikeuDao.updateUser(user)
     suspend fun deleteUser(user: Users) = hikeuDao.deleteUser(user)
-    var currentUser = -1
+
+    suspend fun getUserByUsername(username: String): Users = hikeuDao.getUserByUsername(username)
+
+    var currentUserID = 0
+
 
     val pruebaRutasList = listOf<OfficialTrails>(
 
